@@ -1,0 +1,14 @@
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.AssemblyInfoInputs.cache
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.AssemblyInfo.cs
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.csproj.CoreCompileInputs.cache
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\bin\Debug\net8.0\HospitalMangementSystemFinal.exe
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\bin\Debug\net8.0\HospitalMangementSystemFinal.deps.json
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\bin\Debug\net8.0\HospitalMangementSystemFinal.runtimeconfig.json
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\bin\Debug\net8.0\HospitalMangementSystemFinal.dll
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\bin\Debug\net8.0\HospitalMangementSystemFinal.pdb
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.dll
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\refint\HospitalMangementSystemFinal.dll
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.pdb
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\HospitalMangementSystemFinal.genruntimeconfig.cache
+C:\Users\Inshaf Rajayee\Desktop\Projects\DSA\HospitalMangementSystemFinal\obj\Debug\net8.0\ref\HospitalMangementSystemFinal.dll

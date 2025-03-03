@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace HospitalManagementSystem
@@ -8,14 +8,14 @@ namespace HospitalManagementSystem
         static void Main()
         {
             DisplayBanner();
-            // Initialize managers
             PatientManager patientManager = new PatientManager();
             DoctorManager doctorManager = new DoctorManager();
             AppointmentManager appointmentManager = new AppointmentManager(patientManager, doctorManager);
-            HospitalBedManager bedManager = new HospitalBedManager(50);
+            HospitalBedManager bedManager = new HospitalBedManager(50); // Assume 50 beds available
             BillingManager billingManager = new BillingManager();
             LoginManager loginManager = new LoginManager();
             AddPredefinedDataDirectly(patientManager, doctorManager, appointmentManager, bedManager);
+            // Display login screen
             if (!loginManager.ShowLoginMenu())
             {
                 Console.WriteLine("Exiting system...");
@@ -64,7 +64,7 @@ namespace HospitalManagementSystem
         }
         static void AddPredefinedDataDirectly(PatientManager patientManager, DoctorManager doctorManager, AppointmentManager appointmentManager, HospitalBedManager bedManager)
         {
-
+           
             patientManager.patientsList.AddEnd(new Patient { Id = 17, Name = "John Doe", Age = 30, Disease = "Fever", IsEmergency = false });
             patientManager.patientsList.AddEnd(new Patient { Id = 22, Name = "Jane Smith", Age = 25, Disease = "Broken Arm", IsEmergency = true });
             patientManager.patientsList.AddEnd(new Patient { Id = 19, Name = "Alice Johnson", Age = 40, Disease = "Headache", IsEmergency = false });
@@ -89,9 +89,6 @@ namespace HospitalManagementSystem
             bedManager.allocatedBeds.AddEnd(4);
             bedManager.allocatedBeds.AddEnd(5);
         }
-       
-
-
         static void ManageAppointments(AppointmentManager appointmentManager)
         {
             while (true)
@@ -128,7 +125,6 @@ namespace HospitalManagementSystem
                 Console.ReadLine();
             }
         }
-
         static void ManageBeds(HospitalBedManager bedManager)
         {
             while (true)
@@ -139,9 +135,7 @@ namespace HospitalManagementSystem
                 Console.WriteLine("2 Free Bed");
                 Console.WriteLine("3 Back to Main Menu");
                 Console.Write("Choose an option: ");
-
                 int choice = Utility.GetIntInput("");
-
                 switch (choice)
                 {
                     case 1:
@@ -161,7 +155,6 @@ namespace HospitalManagementSystem
                 Console.ReadLine();
             }
         }
-
         static void ManageBilling(BillingManager billingManager)
         {
             while (true)
@@ -172,9 +165,7 @@ namespace HospitalManagementSystem
                 Console.WriteLine("2 View Bill");
                 Console.WriteLine("3 Back to Main Menu");
                 Console.Write("Choose an option: ");
-
                 int choice = Utility.GetIntInput("");
-
                 switch (choice)
                 {
                     case 1:
@@ -194,7 +185,6 @@ namespace HospitalManagementSystem
                 Console.ReadLine();
             }
         }
-
         static void ManagePatients(PatientManager patientManager)
         {
             while (true)
@@ -207,9 +197,7 @@ namespace HospitalManagementSystem
                 Console.WriteLine("4 Delete Patient");
                 Console.WriteLine("5 Back to Main Menu");
                 Console.Write("Choose an option: ");
-
                 int choice = Utility.GetIntInput("");
-
                 switch (choice)
                 {
                     case 1:
@@ -236,7 +224,6 @@ namespace HospitalManagementSystem
                 Console.ReadLine();
             }
         }
-
         static void ManageDoctors(DoctorManager doctorManager)
         {
             while (true)
@@ -248,9 +235,7 @@ namespace HospitalManagementSystem
                 Console.WriteLine("3 Delete Doctor");
                 Console.WriteLine("4 Back to Main Menu");
                 Console.Write("Choose an option: ");
-
                 int choice = Utility.GetIntInput("");
-
                 switch (choice)
                 {
                     case 1:
@@ -273,7 +258,6 @@ namespace HospitalManagementSystem
                 Console.ReadLine();
             }
         }
-
         static void DisplayBanner()
         {
             Console.Clear();
