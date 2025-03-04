@@ -3,21 +3,13 @@ using System.Collections.Generic;
 
 namespace HospitalManagementSystem
 {
-    class Appointment : IComparable<Appointment>
+    class Appointment
     {
         public int AppointmentId { get; set; }
         public int PatientId { get; set; }
         public int DoctorId { get; set; }
         public DateTime AppointmentDate { get; set; }
         public bool IsEmergency { get; set; }
-
-        public int CompareTo(Appointment? other)
-        {
-            if (other == null) return 1; // Handle null case
-            if (IsEmergency && !other.IsEmergency) return -1; // Emergency first
-            if (!IsEmergency && other.IsEmergency) return 1;
-            return AppointmentDate.CompareTo(other.AppointmentDate); // Earlier date first
-        }
     }
 
     class AppointmentManager
@@ -59,28 +51,25 @@ namespace HospitalManagementSystem
             {
                 Console.Write("Invalid format! Enter Date (YYYY-MM-DD HH:MM): ");
             }
-
-            appointments.AddEnd(new Appointment
-            {
-                AppointmentId = appointmentId,
-                PatientId = patientId,
-                DoctorId = doctorId,
-                AppointmentDate = appointmentDate,
-                IsEmergency = patient.IsEmergency
-            });
-
+            Appointment newappointment = new Appointment();
+            newappointment.AppointmentId = appointmentId;
+            newappointment.PatientId = patientId;
+            newappointment.DoctorId = doctorId;
+            newappointment.AppointmentDate = appointmentDate;
+            newappointment.IsEmergency = patient.IsEmergency;
             Console.WriteLine("\nAppointment scheduled successfully!");
         }
         public void DeleteAppointment(int appointmentId)
         {
             Appointment? appointmentToDelete = null;
-            appointments.Traverse(appointment =>
+            foreach(var appointment in appointments.ToList())
             {
                 if (appointment.AppointmentId == appointmentId)
                 {
-                    appointmentToDelete = appointment;
+                    appointmentToDelete = appointment; 
+                    break;
                 }
-            });
+            }
 
             if (appointmentToDelete != null)
             {
