@@ -31,13 +31,14 @@ namespace HospitalManagementSystem
         public void DeleteDoctor(int id)
         {
             Doctor? doctorToDelete = null;
-            doctors.Traverse(doctor =>
+            foreach (var doctor in doctors.ToList())
             {
                 if (doctor.Id == id)
                 {
                     doctorToDelete = doctor;
+                    break;
                 }
-            });
+            }
 
             if (doctorToDelete != null)
             {

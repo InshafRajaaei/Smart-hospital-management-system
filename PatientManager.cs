@@ -24,14 +24,14 @@ namespace HospitalManagementSystem
         public void DeletePatient(int id)
         {
             Patient? patientToDelete = null;
-            patientsList.Traverse(patient =>
+            foreach (var patient in patientsList.ToList())
             {
                 if (patient.Id == id)
                 {
                     patientToDelete = patient;
+                    break;
                 }
-            });
-
+            }
             if (patientToDelete != null)
             {
                 patientsList.Remove(patientToDelete);
@@ -61,14 +61,14 @@ namespace HospitalManagementSystem
         public Patient? SearchPatient(int id)
         {
             Patient? foundPatient = null;
-            patientsList.Traverse(patient =>
+            foreach (var patient in patientsList.ToList())
             {
                 if (patient.Id == id)
                 {
                     foundPatient = patient;
+                    break;
                 }
-            });
-
+            }
             if (foundPatient != null)
             {
                 Console.WriteLine("\nPatient Found:");
