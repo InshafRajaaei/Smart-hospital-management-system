@@ -57,6 +57,7 @@ namespace HospitalManagementSystem
             newappointment.DoctorId = doctorId;
             newappointment.AppointmentDate = appointmentDate;
             newappointment.IsEmergency = patient.IsEmergency;
+            appointments.AddEnd(newappointment);
             Console.WriteLine("\nAppointment scheduled successfully!");
         }
         public void DeleteAppointment(int appointmentId)
